@@ -1,10 +1,10 @@
 <?php
 
 class ProductController {
-    public function readAll() {
+    public function ArticleHomePage() {
       // we store all the posts in a variable
       $products = Product::all();
-      require_once('views/products/readAll.php');
+      require_once('views/products/ArticleHomePage.php');
     }
 
     public function read() {
