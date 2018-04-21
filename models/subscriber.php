@@ -5,7 +5,7 @@ function subscriberExistsAlert() {
 }
 
 function subscriberAddedAlert() {
-    echo '<script type="text/javascript">alert("You are signed up!");document.location="index.php"</script>';
+    echo '<script type="text/javascript">alert("Thank you for signing up!");document.location="index.php"</script>';
 }
 
 class Subscriber {
@@ -31,6 +31,21 @@ class Subscriber {
         } else {
             return subscriberExistsAlert();
         }
+    }
+    
+    public static function removeSubscriber(){
+        $db = Db::getInstance();
+        $req = $db->prepare('DELETE FROM subscriber WHERE name=:name AND email=:email');
+        $req->bindParam(':name', $name);
+        $req->bindParam(':email', $email);
+        
+        if(isset ($_POST['name']) && isset($_POST['email']) && $_POST['name'] != '' && $_POST['email'] !=''){
+            $fname = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
+            $femail = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+        }
+        $name=$fname;
+        $email=$femail;
+        $req->execute();                
     }
 
 }
