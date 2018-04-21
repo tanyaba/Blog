@@ -29,7 +29,7 @@ function call($controller, $action) {
 
 $controllers = array('pages' => ['home', 'error','Homepage', 'unsubscribe'],
                     'article' => ['readAll','read','readArticle', 'createArticle','createComment', 'create','update','delete','readcategory','searchAll'],
-                     'blogger' => ['login', 'logout'],
+                     'blogger' => ['login', 'logout', 'register'],
                      'subscriber' => ['addSubscriber', 'removeSubscriber'],
                     );
 
