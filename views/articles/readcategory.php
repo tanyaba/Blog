@@ -5,7 +5,7 @@ $numOfCols = 3;
 $rowCount = 0;
 $bootstrapColWidth = 12 / $numOfCols;
 ?>
-<div class="row">
+<div class="row" style="margin-bottom: 40px">
 <?php
 foreach ($articles as $article){
    $file = 'views/images/' . $article->id. '.jpg';
