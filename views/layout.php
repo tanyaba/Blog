@@ -53,8 +53,18 @@
                     <li><a href='?controller=product&action=create'>Food & Drink</a></li>
                     <li><a href="#">Social</a></li>
                     <li><a href="#">Sight Seeing</a></li>
-                    <li><a href="#">Hotels</a></li>
+                    <li><a href="#">Hotels</a></li>                   
                 </ul>
+                <?php
+                    if (isset($_SESSION['blogger_id'])){
+                        echo "<ul class='nav navbar-nav'>";
+                        echo "<li><a href='?controller=article&action=readAll'>Amend articles</a></li> ";
+                        echo "<li><a href='?controller=article&action=createArticle'>Create New Article</a></li>";
+                        echo "</ul>";
+                        
+                    }
+                    ?>
+                
                 <form action="index.php" method="GET" role="form" id="searchform" class="navbar-form navbar-right">
                     <div class="input-group">
                         <input type="text" name="search" id="search" class="form-control" placeholder="Search">
@@ -71,7 +81,7 @@
             </div>
         </nav>
         <div class='container' >
-            <?php require_once('routes.php'); ?>
+            <?php require_once('routes.php');?>
         </div>
         <footer class="footer">
             <div class='container'>
@@ -81,6 +91,7 @@
                             <p><a href='?controller=product&action=create'>About us</a></p>
                             <p><a href='?controller=product&action=create'>Contact us</a></p>
                             <p><a href='?controller=blogger&action=login'>Blogger login</a></p>
+                            <p><a href='?controller=pages&action=unsubscribe'>Unsubscribe</a></p>
                         </div>
 
                     </div>
@@ -111,8 +122,8 @@
                         </div>
                     </div>
                 </div>
-            </div
-        </div>
+            </div>
+        
     </footer>
 </body>
 </html>                            

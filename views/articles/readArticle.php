@@ -1,10 +1,10 @@
-
+<!-- Display article title-->
 <div class="page-header text-center">
     <h2><?php echo $article->title; ?></h2>
 <small style="color:graytext"> <i>Posted on <?php echo $article->date; ?></i></small>
 </div>
-    <div style="background-color:gold" class="">
-        
+    
+<!-- Display image-->        
 <?php
 $file = 'views/images/' . $article->id. '.jpg';
 if (file_exists($file)) {
@@ -12,18 +12,13 @@ if (file_exists($file)) {
     echo $img;
 } 
 ?>
-    </div>
-
-
+ <!-- Display content-->   
 <p class="text-justify" style="margin-top: 30px; margin-bottom: 40px"><?php echo $article->content; ?></p>
 
-
-
-<!-- map will be inserted here if exists -->
+<!--  Display map if exists -->
 <div id="map"></div> 
 
-
-
+<!-- Display comments-->
 <p class="page-header"></p>
 
 <?php foreach ($comments as $commentObj) { ?>
@@ -36,6 +31,7 @@ if (file_exists($file)) {
 
 <?php } ?>
  
+<!-- Form for comments-->
 <form action="" method="POST"  enctype="multipart/form-data">
    
     <div class="form-group row">
@@ -57,11 +53,6 @@ if (file_exists($file)) {
             <input class="form-control" type="email" name="email" required>
             </div>            
         </div>
-            
-  <input type="hidden" 
-	   name="MAX_FILE_SIZE" 
-         value="10000000"
-         />
 
   <p>
       <button class="btn btn-info btn-lg"  type="submit">Submit</button>

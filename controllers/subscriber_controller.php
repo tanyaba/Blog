@@ -15,6 +15,16 @@ class subscriberController {
             return call('pages', 'error');
         }
     }
+    
+    public function removeSubscriber(){
+        if ($_SERVER['REQUEST_METHOD'] == 'GET'){
+            return call('pages', 'unsubscribe');
+        } else {
+            Subscriber::removeSubscriber();
+            call('pages', 'Homepage');
+            
+        }        
+    }
 }
 
 ?>
