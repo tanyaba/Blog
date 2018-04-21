@@ -3,13 +3,18 @@
 include_once __DIR__ . '/../models/subscriber.php';
 
 class subscriberController {
-    
-    public $subscriber; 
-    
+
+    public $subscriber;
+
     public function addSubscriber() {
-        if(isset($_POST['subscribe'])) {
-       $subscriber = subscriber::addSubscriber($_POST['subscriber_name'], $_POST['subscriber_email']);
+        try {
+            if (isset($_POST['subscribe'])) {
+                $subscriber = subscriber::addSubscriber($_POST['subscriber_name'], $_POST['subscriber_email']);
+            }
+        } catch (Exception $ex) {
+            return call('pages', 'error');
         }
     }
 }
+
 ?>
