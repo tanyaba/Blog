@@ -12,13 +12,24 @@
                 <label for="password" class="col-sm-2 col-form-label">Password</label>
                 <input type="password" class="form-control" name="password"id="Password" placeholder="password">
                 <br/>
-                <center>
-                    <button type="submit" name="submit"class="btn btn-primary">Register</button>
+            <center>
                     <button type="submit" name="submit"class="btn btn-primary">Sign in</button>
-                </center>
+                    <p><a href='?controller=blogger&action=register'>Register</a></p> 
+            </center>
             </form>
-        </div>
-        <div class='col-md-4'>
+            </div>
+          <div class='col-md-4'>
         </div>
     </div>
 </div>
+<center>
+            <?php 
+            if ($showLoginWarning) {
+                echo '<h2>' . "Wrong username or password" . '</h2>'; 
+            }
+            
+            ?>
+</center>
+            
+        
+      

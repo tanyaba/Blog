@@ -12,9 +12,10 @@ class ArticleController {
                 return call('pages', 'error');
             }
         } else {
-            Comment::newComment($_GET['article_id']);
-            header("Location: " . $_SERVER['REQUEST_URI']);
-            exit();
+            Comment::newComment($_GET['article_id']); 
+           
+            //header("Location: " . $_SERVER['REQUEST_URI']);
+            //exit();
         }
         try {
             // we use article_id to get the correct article and comments to it

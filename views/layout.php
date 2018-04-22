@@ -35,26 +35,45 @@
                 <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
                 <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
                 <li><i class="fa fa-search" style="color: white;margin-top: 20px "></i></li>
+                 <form action="index.php" method="GET" role="form" id="searchform" class="navbar-form navbar-right">
+                    <div class="input-group">
+                        <input type="text" name="search" id="search" class="form-control" placeholder="Search">
+                        <input type="hidden" name="controller" value="article">
+                        <input type="hidden" name="action" value="searchAll">
+                        <span class="input-group-btn">
+                            <button type="submit" id="search" class="btn btn-default">
+                                <span class="glyphicon glyphicon-search">
+                                </span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
                </ul>
+              <?php
+                    if (isset($_SESSION['blogger_id'])){
+                        echo "<ul>";
+                        echo "<li><a href='?controller=article&action=readAll'>Amend articles</a></li> ";
+                        echo "<li><a href='?controller=article&action=createArticle'>Create New Article</a></li>";
+                        echo "</ul>";
+                        
+                    }
+                    ?>
            </div>
 
 
             <div class='container' >
                 <?php require_once('routes.php'); ?>
             </div>
-
-
             <div class="footer">
                 <ul>
                 <li><p style="margin-top:15px;font-size: small">@WhatsUpLondon2018</p></li>
                 <li><a href="#AboutUs"><p style="font-size: small;margin-left: 60px"> About Us</p></a></li>
                 <li><a href="#ContactUs"><p style="font-size: small">Contact Us</p></a></li>
+                  <li><a href='?controller=pages&action=unsubscribe'>Unsubscribe</a></li>
+                  <li><a href='?controller=blogger&action=login'>Blogger login</a></li>
                 <p><button class="w3-btn" style="margin-top: 15px;background-color: grey">Member Login<i class="w3-margin-left fa fa-user"></i></button></p>
                 </ul>
-            </div>
-
-
-
+          </div>
     </body>
     </html>                            
-
+                   

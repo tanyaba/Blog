@@ -24,5 +24,8 @@ class PagesController {
       $articles = ArticlewithComments::articleswithcomments();
       require_once('views/pages/Homepage.php');
     }
+    public function unsubscribe(){
+        require_once 'views/pages/unsubscribe.php';
+    }
 
 }

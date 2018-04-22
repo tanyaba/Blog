@@ -1,11 +1,9 @@
 
-<a href='?controller=article&action=createArticle'>Create New Article</a>
-
 <p>Here is a list of all articles</p>
 <div class="row">
     <div class="pull-right">
-       
             <a href='?controller=blogger&action=logout' class="btn btn-info" role="button">Logout</a>
+            <a href="?controller=blogger&action=register" class="btn btn-info" role="button"> Add collaborator</a>
         
     </div>
 </div>
