@@ -30,7 +30,9 @@ function call($controller, $action) {
 $controllers = array('pages' => ['home', 'error','Homepage'],
                     'article' => ['readAll','read','readArticle', 'createArticle','createComment', 'create','update','delete','readcategory','searchAll'],
                      'blogger' => ['login', 'logout'],
-                     'subscriber' => ['addSubscriber'],
+                     'subscriber' => ['addSubscriber'],            
+                     'ArticlewithComments'=>['articlewithcomments']
+    
                     );
 
 // check that the requested controller and action are both allowed

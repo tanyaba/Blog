@@ -30,11 +30,11 @@
                 <li><a href="#about">Social</a></li>
                 <li><a href="#about">Sight Seeing</a></li>
                 <li><a href="#about">Hotels</a></li>
-                <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook" style="margin-left: 400px"></i></a></li>
+                <li><a href="www.facebook.com" class="icoFacebook" title="Facebook"><i class="fa fa-facebook" style="margin-left: 400px"></i></a></li>
                 <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
                 <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-search"></i></a></li>
+                <li><i class="fa fa-search" style="color: white;margin-top: 20px "></i></li>
                </ul>
            </div>
 
@@ -49,6 +49,7 @@
                 <li><p style="margin-top:15px;font-size: small">@WhatsUpLondon2018</p></li>
                 <li><a href="#AboutUs"><p style="font-size: small;margin-left: 60px"> About Us</p></a></li>
                 <li><a href="#ContactUs"><p style="font-size: small">Contact Us</p></a></li>
+                <p><button class="w3-btn" style="margin-top: 15px;background-color: grey">Member Login<i class="w3-margin-left fa fa-user"></i></button></p>
                 </ul>
             </div>
 

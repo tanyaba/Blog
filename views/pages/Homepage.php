@@ -22,8 +22,8 @@ foreach ($articles as $article){
   <img src="<?php echo $file?>" alt="" style="width: 350px;height:200px">
   <div class="w3-container w3-center">
       <div class="fonttitle" ><a  href="?controller=article&action=readArticle&article_id=<?php echo $article->id; ?>"><p><?php echo $article->title; ?></p></a></div>
-          <div class="font" style="font-style: italic; margin-left:-75px ">Posted on <?php echo $article->date?>
-         <span class="glyphicon glyphicon-comment" style="margin-left: 50px"></span>
+      <div class="font" style="font-style: italic; margin-left:-40px ">Posted on <?php echo $article->date;?>
+          <p style="display: inline;margin-left: 50px"><?php echo $article->numberofcomments;?></p><span class="glyphicon glyphicon-comment" style="margin-left: 2px"></span>
          <span class="glyphicon glyphicon-thumbs-up" style="margin-left: 10px"></span>
          
           </div>
@@ -37,6 +37,24 @@ foreach ($articles as $article){
     if($rowCount % $numOfCols == 0) echo '</div><div class="row">';
 }
 ?>
+    <form action="action_page.php">
+  <div class="container">
+    <h2>Be a part of us!</h2>
+    <p>Bring your thoughts on one of the most wonderful city in the world!</p>
+  </div>
+
+  <div class="container" style="background-color:white">
+    <input type="text" placeholder="Name" name="name" required>
+    <input type="text" placeholder="Email address" name="mail" required>
+    <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
+  </div>
+
+  <div class="container">
+    <input type="submit" value="Subscribe">
+  </div>
+</form> 
 </div>
 
 
