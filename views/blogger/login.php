@@ -1,7 +1,10 @@
+<div class="blogger-bg">
 <div class='padding50px'>
     <div class='row'>
         <div class='col-md-4'>
         </div>
+        <div class="login-box">
+             
         <div class='col-md-4'>
             <center><h2> Blogger login </h2></center>
             <br/>
@@ -22,6 +25,9 @@
         </div>
     </div>
 </div>
+    </div>
+
+    
 <center>
             <?php 
             if ($showLoginWarning) {
@@ -30,6 +36,7 @@
             
             ?>
 </center>
+    </div>
             
         
       
