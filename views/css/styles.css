@@ -2,7 +2,72 @@ html,body{
     height: 100%
 }
 
-/*newsletter sign up*/
+/*navbar customisation*/
+.customnavbar {
+    
+    color: #fff;
+    background-color: #252A8B !important;
+    background-image: none;
+    background-repeat: none;
+    font-family: "Quicksand";
+    font-size: 20px;
+}
+
+.customnavbar a:hover {
+    background-color: #d3d4e7 !important;
+    text-decoration: none;   
+}
+
+.customnavbar .current {
+    background-color: #d3d4e7 !important;
+    text-decoration: none;
+}
+
+ul.customnavbar {
+    background-color: #3A3F96 !important;
+}
+
+.customfooter {
+    color: #fff;
+    background-color: #252A8B !important;
+    background-image: none;
+    background-repeat: none;
+    font-family: "Quicksand";
+    font-size: 10px;
+}
+
+.customfooter a:hover {
+    background-color: #d3d4e7 !important;
+    text-decoration: none;   
+}
+
+/*searchbox*/
+
+.searchbox {
+    border: 0px;
+}
+
+.searchbox input[type=text] {
+    width: 0px;
+    box-sizing: border-box;
+    border: 2px;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #3A3F96;
+    background-image: url('../images/search-box-white.png');
+    background-position: 4px 4px; 
+    background-repeat: no-repeat;
+    padding: 12px 10px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.searchbox input[type=text]:focus {
+    width: 200px;
+    box-shadow: 0 0 5px #3A3F96;
+}
 
 /* Style the form element with a border around it */
 .newsletter-form {
