@@ -77,10 +77,10 @@ class Article {
     public static function all() {
       $list = [];
       $db = Db::getInstance();
-      $req = $db->query('Select * from article ORDER by date DESC limit 6'); //SELECT * FROM `article` 
+      $req = $db->query('select article.article_id as article_id,title,content,article.date as date,count(comment.article_id) as numberofcomments from article join comment on article.article_id=comment.article_id group by article.article_id order by article.date DESC limit 6'); //SELECT * FROM `article` 
       // we create a list of Product objects from the database results
       foreach($req->fetchAll() as $article) {
-        $list[] = new Article($article['article_id'], $article['title'], $article['content'], $article['date']);
+        $list[] = new Article($article['article_id'], $article['title'],$article['content'], $article['date'],$article['numberofcomments']);
       }
       return $list;
     }
@@ -232,6 +232,7 @@ class Article {
         $req->execute(array('article_id' => $id));
     }
 
+    
    
 //     public static function update($id) {
 //         $db = Db::getInstance();

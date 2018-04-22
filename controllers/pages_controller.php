@@ -1,7 +1,8 @@
 <?php
 
 include __DIR__ . '/../models/blogger.php';
-require_once('models/article.php');
+include __DIR__ . '/../models/ArticlewithComments.php';
+//require_once('models/ArticleswithComments.php');
 
 class PagesController {
 
@@ -20,7 +21,7 @@ class PagesController {
     }
     public function Homepage() {
       // we store all the posts in a variable
-      $articles = Article::all();
+      $articles = ArticlewithComments::articleswithcomments();
       require_once('views/pages/Homepage.php');
     }
     public function unsubscribe(){
