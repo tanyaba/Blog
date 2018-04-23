@@ -5,8 +5,11 @@
         </video>
     </div>
 </section>
-
-
+<!--text over video-->
+<div class="overlay-desc">
+    <h1>What's up London
+        <br>Bloggy Blog</h1>
+</div>
 
 <!--<video autoplay muted loop id="myVideo" >
   <source src="views/videos/London.mp4" type="video/mp4">
@@ -19,11 +22,11 @@ $numOfCols = 3;
 $rowCount = 0;
 $bootstrapColWidth = 12 / $numOfCols;
 ?>
-<div class="row" style="margin-top: 650px">
+<div class="row" style="margin-top: 620px">
     <?php
     foreach ($articles as $article) {
         $file = 'views/images/' . $article->id . '.jpg';
-        ?>  
+        ?>
         <div class="col-md-<?php echo $bootstrapColWidth; ?>">
             <div class="w3-card-4" style="margin-top: 10px;padding-left: 10px" >
                 <img src="<?php echo $file ?>" alt="" style="width:100%">
@@ -35,7 +38,7 @@ $bootstrapColWidth = 12 / $numOfCols;
 
                     </div>
 
-    <!--<a href="?controller=article&action=readArticle&article_id=<?php echo $article->id; ?>" class="btn" style="margin-bottom:5px">Read more</a>-->
+        <!--<a href="?controller=article&action=readArticle&article_id=<?php echo $article->id; ?>" class="btn" style="margin-bottom:5px">Read more</a>-->
                 </div>
             </div>
         </div>
@@ -45,7 +48,7 @@ $bootstrapColWidth = 12 / $numOfCols;
             echo '</div><div class="row">';
     }
     ?>
-    
+
 
 
 
