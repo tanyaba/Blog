@@ -27,5 +27,8 @@ class PagesController {
     public function unsubscribe(){
         require_once 'views/pages/unsubscribe.php';
     }
+    public function contact() {
+        require_once('views/pages/contact.php');
+    }
 
 }
