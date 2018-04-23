@@ -7,7 +7,7 @@ if ($num_rows > 0) {
     foreach ($list as $article) {
         ?>
         <tr>
-            <td><img src="views/images/<?php echo $article->id . '.jpg'; ?>" class="searchResult"><a href='?controller=article&action=read&readArticle_id=<?php echo $article->id; ?>' class="searchResult">
+            <td><img src="views/images/<?php echo $article->id . '.jpg'; ?>" class="searchResult"><a href='?controller=article&action=readArticle&article_id=<?php echo $article->id; ?>' class="searchResult">
         <?php echo $article->title . " "; ?> </a><i>published on <?php echo $article->date; ?> </i></br> </td>    
         </tr> 
     <?php
