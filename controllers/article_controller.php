@@ -123,5 +123,7 @@ public function searchAll() {
         $keyword = ($_GET['search']);
         require_once __DIR__ . '/../views/articles/search.php';
     }
+    
 }
+
 ?>

@@ -22,14 +22,14 @@
             <script src="https://apis.google.com/js/platform.js" async defer></script>
         </head> 
         <body>    
-            <div class="topnav">
+            <div class="topnav" id="topnav">
                <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="?controller=article&action=readcategory">What's On</a></li>
-                <li><a href="#contact">Food & Drink</a></li>
-                <li><a href="#about">Social</a></li>
-                <li><a href="#about">Sight Seeing</a></li>
-                <li><a href="#about">Hotels</a></li>
+                <li><a href="?controller=comment&action=categoryone">What's On</a></li>
+                <li><a href="?controller=comment&action=categorytwo">Food & Drink</a></li>
+                <li><a href="?controller=comment&action=categorythree">Social</a></li>
+                <li><a href="?controller=comment&action=categoryfive">Sight Seeing</a></li>
+                <li><a href="?controller=comment&action=categorysix">Hotels</a></li>
                 <li><a href="www.facebook.com" class="icoFacebook" title="Facebook"><i class="fa fa-facebook" style="margin-left: 400px"></i></a></li>
                 <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
