@@ -31,7 +31,7 @@ $controllers = array('pages' => ['home', 'error','Homepage', 'unsubscribe', 'con
                     'article' => ['readAll','read','readArticle', 'createArticle','createComment', 'create','update','delete','readcategory','searchAll'],
                      'blogger' => ['login', 'logout', 'register'],
                      'subscriber' => ['addSubscriber', 'removeSubscriber'],
-                     'ArticlewithComments'=>['articlewithcomments']
+                     'comment'=>['articlewithcomments','categoryone','categorytwo','categorythree','categoryfive','categorysix']
                     );
 
 // check that the requested controller and action are both allowed
