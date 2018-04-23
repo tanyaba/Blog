@@ -26,7 +26,7 @@
             <ul class="customnavbar">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="?controller=article&action=readcategory">What's On</a></li>
-                <li><a href="#contact">Food & Drink</a></li>
+                <li><a href="?controller=comment&action=categorytwo">Food & Drink</a></li>
                 <li><a href="#about">Social</a></li>
                 <li><a href="#about">Sight Seeing</a></li>
                 <li><a href="#about">Hotels</a></li>
@@ -72,6 +72,8 @@
         <li><a href='?controller=pages&action=unsubscribe'>Unsubscribe</a></li>
         <li><a href='?controller=blogger&action=login'>Blogger login</a></li>
     </ul>
+    
+    <ul>
 </div>
 </body>
 </html>                            
