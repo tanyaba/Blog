@@ -1,4 +1,5 @@
-<h1>Your search for <i> <?php echo $keyword ?> </i></h1>
+
+</br><h1>Your search for <i> <?php echo $keyword ?> </i></h1>
 </br>
 
     <?php

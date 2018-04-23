@@ -49,6 +49,9 @@
                 echo "<ul class='customnavbar'>";
                 echo "<li><small><a href='?controller=article&action=readAll'>Amend articles</a></small></li> ";
                 echo "<li><small><a href='?controller=article&action=createArticle'>Create New Article</a></small></li>";
+                  echo "<li><small><a href='?controller=blogger&action=register'>Add collaborator</a></small></li>";
+                echo "<li><small><a href='?controller=blogger&action=logout'>Logout</a></small></li>";
+              
                 echo "</ul>";
             }
             ?>

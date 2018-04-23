@@ -41,6 +41,7 @@ ul.customnavbar {
 }
 
 .searchbox input[type=text] {
+    color: #fff;
     width: 0px;
     box-sizing: border-box;
     border: 2px;
@@ -319,5 +320,4 @@ img.searchResult {
     margin-left: 13px;
     margin-right: 5px;
     margin-top: 5px;
-
 }

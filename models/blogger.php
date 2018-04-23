@@ -1,5 +1,13 @@
 <?php
 
+function bloggerAdded() {
+    echo '<script type="text/javascript">alert("New blogger created");document.location="index.php?controller=article&action=readAll"</script>';
+}
+
+function bloggerExists() {
+    echo '<script type="text/javascript">alert("Username already exists")</script>';
+}
+
 class Blogger {
 
     private $blogger_id;
@@ -43,9 +51,9 @@ class Blogger {
         if ($num_rows == 0) {
             $add = $db->prepare("INSERT INTO blogger (f_name, l_name, email, username, password) VALUES ('$f_name', '$l_name', '$email', '$username', '$hashedPassword')");
             $add->execute();
-            return "New blogger added";
+            return bloggerAdded();
         } else {
-            return "This username or password is already registered";
+            return bloggerExists();
         }
     }
 

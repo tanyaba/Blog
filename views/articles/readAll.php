@@ -1,12 +1,6 @@
-
-<p>Here is a list of all articles</p>
-<div class="row">
-    <div class="pull-right">
-            <a href='?controller=blogger&action=logout' class="btn btn-primary" role="button">Logout</a>
-            <a href="?controller=blogger&action=register" class="btn btn-primary" role="button"> Add collaborator</a>
-        
-    </div>
-</div>
+</br>
+<h2>Here is a list of all articles</h2>
+</br>
 
 <table style="width:70%">
     <tr>
