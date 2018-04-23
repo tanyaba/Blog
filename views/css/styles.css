@@ -312,3 +312,12 @@ input[type=submit]:hover {
 }
 
 
+img.searchResult {
+
+    width: 150px;
+    height: 100px;
+    margin-left: 13px;
+    margin-right: 5px;
+    margin-top: 5px;
+
+}
