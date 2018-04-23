@@ -24,15 +24,22 @@
   <!-- map-->
   
   <div > <p style="font-weight:bold">Map coordinates</p></div>
-    <div class="">
+ 
         <label>Latitude</label>
-        <input class="w2-input" type="text" name="latitude" >
+        <div class="row" >
+            <div class="col-xs-3">
+        <input class="form-control" type="text" name="latitude" >
+            </div>
+        </div>
         <label>Longitude</label>
-        <input class="w2-input" type="text" name="longitude" >
+        <div class="row" >
+            <div class="col-xs-3">
+        <input class="form-control" type="text" name="longitude" >
+            </div>
     </div> 
   
-  <p style="margin-top: 20px">
-    <input class="btn btn-primary btn-sm" type="submit" name='submit' value="Create Article">
-  </p>
+  <div  style="margin-top: 10px; margin-bottom: 20px">
+      <button class="btn btn-primary" type="submit" name='submit'>Create Article</button>
+  </div>
 </form>
        

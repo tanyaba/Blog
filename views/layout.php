@@ -49,18 +49,16 @@
 
 <!--                                    <span class="glyphicon glyphicon-search">
                                     </span>-->
-        </div>
     </ul>
     <?php
     if (isset($_SESSION['blogger_id'])) {
-        echo "<ul>";
-        echo "<li><a href='?controller=article&action=readAll'>Amend articles</a></li> ";
-        echo "<li><a href='?controller=article&action=createArticle'>Create New Article</a></li>";
+        echo "<ul class='customnavbar'>";
+        echo "<li><small><a href='?controller=article&action=readAll'>Amend articles</a></small></li> ";
+        echo "<li><small><a href='?controller=article&action=createArticle'>Create New Article</a></small></li>";
         echo "</ul>";
     }
     ?>
-</div>
-</div>
+        </div>
 
 
 <div class='container' >
@@ -68,9 +66,9 @@
 </div>
 <div class="footers">
     <ul class="customfooter">
-        <li><p style="margin-left: 10px; margin-right: 30px; margin-top: 13px; margin-bottom: 13px;">@WhatsUpLondon2018</p></li>
+        <li><p style="margin-left: 10px; margin-right: 30px; margin-top: 13px; margin-bottom: 13px; color: #a8aec1">@WhatsUpLondon2018</p></li>
         <li><a href="#AboutUs">About Us</a></li>
-        <li><a href="#ContactUs">Contact Us</a></li>
+        <li><a href="?controller=pages&action=contact">Contact Us</a></li>
         <li><a href='?controller=pages&action=unsubscribe'>Unsubscribe</a></li>
         <li><a href='?controller=blogger&action=login'>Blogger login</a></li>
     </ul>

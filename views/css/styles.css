@@ -1,3 +1,4 @@
+
 html,body{
     height: 100%
 }
@@ -200,8 +201,8 @@ a {
     margin-bottom: 30%;
     margin-top: 10%;
 }
-
-.btn{
+/*
+.btn_int{
   background-color: #a8aec1;
   border: none;
   color: black;
@@ -211,10 +212,10 @@ a {
   margin: 4px 2px;
   transition: 0.3s;
 }
-.btn:hover {
+.btn_int:hover {
   background-color: rgb(158, 66, 244);
   color: white
-}
+}*/
 
 
 *{box-sizing:border-box}
@@ -347,7 +348,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #8830d1;
+    background-color: #252A8B;
 }
 
 li {
@@ -366,7 +367,7 @@ li a {
 li a:hover {
     background-color: #d1c6cb;
 } 
-
+/*
 .footer {
    left: 0;
    bottom: 0;
@@ -376,7 +377,7 @@ li a:hover {
    text-align: center;
    height: 20px;
    margin-top: 10px;
-}
+}*/
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -445,7 +446,7 @@ form {
     background-color: #f1f1f1;
 }
 
-input[type=text], input[type=submit] {
+input[type=text]{
     width: 100%;
     padding: 12px;
     margin: 8px 0;
@@ -457,12 +458,12 @@ input[type=text], input[type=submit] {
 input[type=checkbox] {
     margin-top: 16px;
 }
-
+/*
 input[type=submit] {
     background-color:#8830d1;
     color: white;
     border: none;
-}
+}*/
 
 input[type=submit]:hover {
     opacity: 0.8;
