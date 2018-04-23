@@ -37,7 +37,7 @@ if (file_exists($file)) {
     <div class="form-group row">
        <div class="col-xs-12">
        <label >Leave your comment:</label>
-    <textarea class="form-control well well-md"  name="comment" required autofocus></textarea>
+    <textarea class="form-control well well-md"  name="comment" required></textarea>
        </div>
    </div>  
     
@@ -55,7 +55,7 @@ if (file_exists($file)) {
         </div>
 
   <p>
-      <button class="btn btn-info btn-lg"  type="submit">Submit</button>
+      <button class="btn btn-primary"  type="submit">Submit</button>
   </p>
 </form>  
 
