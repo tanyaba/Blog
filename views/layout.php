@@ -35,9 +35,6 @@
                         <input type="text" name="search" id="search" class="form-control" placeholder="Search">
                         <input type="hidden" name="controller" value="article">
                         <input type="hidden" name="action" value="searchAll">
-                        <!--<span class="input-group-btn">-->
-<!--                        <button type="submit" id="search" class="btn btn-default">-->
-                            <!--<i class="fa fa-search" style="color: white; margin-top: 20px; margin-right: 10px; "></i>-->
                     </form>
                 </div>
                 <center>
@@ -46,9 +43,6 @@
                 <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
                 <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
                 </center>
-
-<!--                                    <span class="glyphicon glyphicon-search">
-                                    </span>-->
     </ul>
     <?php
     if (isset($_SESSION['blogger_id'])) {
@@ -59,12 +53,10 @@
     }
     ?>
         </div>
-
-
 <div class='container' >
     <?php require_once('routes.php'); ?>
 </div>
-<div class="footers">
+<div class="footer">
     <ul class="customfooter">
         <li><p style="margin-left: 10px; margin-right: 30px; margin-top: 13px; margin-bottom: 13px; color: #a8aec1">@WhatsUpLondon2018</p></li>
         <li><a href="#AboutUs">About Us</a></li>
