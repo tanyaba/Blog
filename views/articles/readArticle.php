@@ -24,20 +24,20 @@ if (file_exists($file)) {
 <?php foreach ($comments as $commentObj) { ?>
 <div class="media">
     <div class="media-body">
-        <h5 class="media-heading"><?php echo $commentObj->subscriber; ?><br> <small><i>Posted on <?php echo $commentObj->date; ?></i></small></h5>
-    <p ><?php echo $commentObj->comment; ?></p>
+        <h6 class="media-heading"><?php echo $commentObj->subscriber; ?><br> <small><i>Posted on <?php echo $commentObj->date; ?></i></small></h6>
+        <p ><small><?php echo $commentObj->comment; ?></small></p>
     </div>
     </div>   
 
 <?php } ?>
  
 <!-- Form for comments-->
-<form action="" method="POST"  enctype="multipart/form-data">
+<form action="" method="POST"  enctype="multipart/form-data" style="margin-top: 5%">
    
     <div class="form-group row">
        <div class="col-xs-12">
        <label >Leave your comment:</label>
-    <textarea class="form-control well well-md"  name="comment" required></textarea>
+       <textarea style="width: 50%" class="form-control well well-md"  name="comment" required></textarea>
        </div>
    </div>  
     
