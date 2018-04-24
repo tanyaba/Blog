@@ -20,8 +20,14 @@ class subscriberController {
         if ($_SERVER['REQUEST_METHOD'] == 'GET'){
             return call('pages', 'unsubscribe');
         } else {
+            try{
             Subscriber::removeSubscriber();
-            call('pages', 'Homepage');
+            header("Location: " . $_SERVER['REQUEST_URI']);
+            exit();
+           
+            } catch (Exception $ex) {
+            return call('pages', 'error');
+        }
             
         }        
     }
