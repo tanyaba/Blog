@@ -15,22 +15,22 @@ class subscriberController {
             return call('pages', 'error');
         }
     }
-    
-    public function removeSubscriber(){
-        if ($_SERVER['REQUEST_METHOD'] == 'GET'){
+
+    public function removeSubscriber() {
+
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             return call('pages', 'unsubscribe');
         } else {
-            try{
-            Subscriber::removeSubscriber();
-            //header("Location: " . $_SERVER['REQUEST_URI']);
-            //exit();
-           
+            try {
+                Subscriber::removeSubscriber();
+                //header("Location: " . $_SERVER['REQUEST_URI']);
+                //exit();
             } catch (Exception $ex) {
-            return call('pages', 'error');
+                return call('pages', 'error');
+            }
         }
-            
-        }        
     }
+
 }
 
 ?>
