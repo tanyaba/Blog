@@ -34,7 +34,7 @@ class Article {
     }
 
     public static function addArticle() {
-        session_start();
+        //session_start();
         $db = Db::getInstance();
         $req = $db->prepare('INSERT INTO article(title, content, date, blogger_id) VALUES (:title, :content, CURDATE(), :blogger_id) '); 
         $req->bindParam(':title', $title);
