@@ -1,5 +1,5 @@
 
-<p>Here is a list of all articles</p>
+<p></p>
 <div class="row">
     <div class="pull-right">
             <a href='?controller=blogger&action=logout' class="btn btn-primary" role="button">Logout</a>

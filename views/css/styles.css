@@ -52,7 +52,7 @@ ul.customnavbar {
 .searchbox input[type=text] {
     width: 0px;
     box-sizing: border-box;
-    border: 2px;
+    border: 1px;
     border-radius: 4px;
     font-size: 16px;
     background-color: #3A3F96;
@@ -342,10 +342,10 @@ li a:hover {
     background: #555; 
 }
 
-input[type=text] {
+.input {
     width: 150px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     background-color:white ;
@@ -358,7 +358,7 @@ input[type=text] {
     height: 30px;
 }
 
-input[type=text]:focus {
+.input:focus {
     width: 50%;
 }
 
@@ -381,13 +381,13 @@ div.fontre {
     font-size: 18px;
 }
 
-form {
+.form {
     border: 3px solid #f1f1f1;
     font-family: Arial;
 }
 
 
-input[type=text]{
+.input1{
     width: 100%;
     padding: 12px;
     margin: 8px 0;
