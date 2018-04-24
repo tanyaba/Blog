@@ -22,8 +22,8 @@ class subscriberController {
         } else {
             try{
             Subscriber::removeSubscriber();
-            header("Location: " . $_SERVER['REQUEST_URI']);
-            exit();
+            //header("Location: " . $_SERVER['REQUEST_URI']);
+            //exit();
            
             } catch (Exception $ex) {
             return call('pages', 'error');

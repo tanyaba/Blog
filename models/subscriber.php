@@ -10,7 +10,7 @@ function subscriberNotExistsAlert() {
     echo '<script type="text/javascript">alert("Subscriber does not exist");document.location="?controller=pages&action=unsubscribe"</script>';
 }
 function unsubscribedAlert() {
-   echo '<script type="text/javascript">alert("You are successfully unsubscribed.")</script>';
+   echo '<script type="text/javascript">alert("You are successfully unsubscribed."); document.location="index.php"</script>';
 }
 
 class Subscriber {
