@@ -1,5 +1,4 @@
 
-
 html,body{
     height: 100%
 }
@@ -8,7 +7,7 @@ html,body{
 .customnavbar {
 
     color: #fff;
-    background-color: #252A8B !important;
+    background-color: transparent !important;
     background-image: none;
     background-repeat: none;
     font-family: "Quicksand";
@@ -26,7 +25,10 @@ html,body{
 }
 
 ul.customnavbar {
-    background-color: #3A3F96 !important;
+    background-color: transparent !important;
+}
+ul.customnavbarPage {
+    background-color: #252A8B !important;
 }
 
 .footer a:hover {
@@ -361,4 +363,3 @@ img.searchResult {
   font-family: "Quicksand";
   color: #fff;
 }
-
