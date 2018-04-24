@@ -1,11 +1,16 @@
 <?php
-
 function subscriberExistsAlert() {
     echo '<script type="text/javascript">alert("Whoop, you are already on the list!");document.location="index.php"</script>';
 }
 
 function subscriberAddedAlert() {
     echo '<script type="text/javascript">alert("Thank you for signing up!");document.location="index.php"</script>';
+}
+function subscriberNotExistsAlert() {
+    echo '<script type="text/javascript">alert("Subscriber does not exist");document.location="?controller=pages&action=unsubscribe"</script>';
+}
+function unsubscribedAlert() {
+   echo '<script type="text/javascript">alert("You are successfully unsubscribed.")</script>';
 }
 
 class Subscriber {
@@ -34,18 +39,26 @@ class Subscriber {
     }
     
     public static function removeSubscriber(){
-        $db = Db::getInstance();
-        $req = $db->prepare('DELETE FROM subscriber WHERE name=:name AND email=:email');
-        $req->bindParam(':name', $name);
-        $req->bindParam(':email', $email);
-        
         if(isset ($_POST['name']) && isset($_POST['email']) && $_POST['name'] != '' && $_POST['email'] !=''){
-            $fname = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
-            $femail = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+            $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
+            $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         }
-        $name=$fname;
-        $email=$femail;
-        $req->execute();                
+        $db = Db::getInstance();
+        $req1 = $db->prepare("SELECT name, email FROM subscriber WHERE email = :email");
+        $req1->execute(array('email'=>$email));
+        $data=$req1->fetch();
+        if($data){     
+        $req = $db->prepare('DELETE FROM subscriber WHERE email=:email');
+        $req->execute(array('email'=>$email));
+        return unsubscribedAlert();
+        } else {
+            return subscriberNotExistsAlert();
+        }
+       
+                 
     }
 
 }
+?>
+
+
