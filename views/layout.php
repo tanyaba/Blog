@@ -23,7 +23,14 @@
     </head> 
     <body>    
         <div class="topnavbar customnavbar">
-            <ul class="customnavbar">
+            <?php 
+        if ($controller=='pages' && $action=='Homepage'){
+            echo "<ul class='customnavbar'>";
+        } else {
+            echo"<ul class='customnavbarPage'>";
+        }
+        ?>
+            <!--<ul class="customnavbar">-->
                 <li><a href="index.php">Home</a></li>
                 <li><a href="?controller=article&action=readcategory">What's On</a></li>
                 <li><a href="?controller=comment&action=categorytwo">Food & Drink</a></li>
