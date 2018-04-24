@@ -6,11 +6,6 @@
     </div>
 </section>
 <!--text over video-->
-<div class="overlay-desc">
-    <h1>What's up London
-        <br>Bloggy Blog</h1>
-</div>
-
 <!--<video autoplay muted loop id="myVideo" >
   <source src="views/videos/London.mp4" type="video/mp4">
 </video>-->
