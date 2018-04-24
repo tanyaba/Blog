@@ -2,8 +2,12 @@
 <div class="page-header text-center">
     <h2><?php echo $article->title; ?></h2>
 <small style="color:graytext"> <i>Posted on <?php echo $article->date; ?></i></small>
+<br><br>
+<div class="fb-like" data-href="http://localhost/MVC-Skeleton/index.php" data-width="20px" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a data-pin-do="buttonBookmark" href="https://www.pinterest.com/pin/create/button/"></a>
 </div>
-    
+
 <!-- Display image-->        
 <?php
 $file = 'views/images/' . $article->id. '.jpg';
@@ -64,7 +68,7 @@ if (file_exists($file)) {
 
 
 <?php 
-// setting variables for coordinates to be used/echoed in JS
+// Map. setting variables for coordinates to be used/echoed in JS
 $lat = $map->latitude; 
 $lng = $map->longitude;  
 ?>    
@@ -82,5 +86,17 @@ $lng = $map->longitude;
         }
     }
 </script>
-
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIUIVIME9OM1AlDAcjQFbD_bfq4usMdQM&callback=initMap"></script>
+
+<!--Facebook -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Pin interest-->
+<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
