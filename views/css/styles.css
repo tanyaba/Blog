@@ -6,7 +6,7 @@ html,body{
 
 /*navbar customisation*/
 .customnavbar {
-    
+
     color: #fff;
     background-color: #252A8B !important;
     background-image: none;
@@ -17,7 +17,7 @@ html,body{
 
 .customnavbar a:hover {
     background-color: #d3d4e7 !important;
-    text-decoration: none;   
+    text-decoration: none;
 }
 
 .customnavbar .current {
@@ -29,18 +29,9 @@ ul.customnavbar {
     background-color: #3A3F96 !important;
 }
 
-.customfooter {
-    color: #fff;
-    background-color: #252A8B !important;
-    background-image: none;
-    background-repeat: none;
-    font-family: "Quicksand";
-    font-size: 10px;
-}
-
-.customfooter a:hover {
+.footer a:hover {
     background-color: #d3d4e7 !important;
-    text-decoration: none;   
+    text-decoration: none;
 }
 
 /*searchbox*/
@@ -50,6 +41,7 @@ ul.customnavbar {
 }
 
 .searchbox input[type=text] {
+    color: #fff;
     width: 0px;
     box-sizing: border-box;
     border: 1px;
@@ -57,7 +49,7 @@ ul.customnavbar {
     font-size: 16px;
     background-color: #3A3F96;
     background-image: url('../images/search-box-white.png');
-    background-position: 4px 4px; 
+    background-position: 4px 4px;
     background-repeat: no-repeat;
     padding: 12px 10px 12px 40px;
     -webkit-transition: width 0.4s ease-in-out;
@@ -72,21 +64,21 @@ ul.customnavbar {
 }
 
 /* Style the form element with a border around it */
-.newsletter-form {
+.newsletter form {
     border: 3px solid #f1f1f1;
 }
 
 /* Add some padding and a grey background color to containers */
-.newsletter-container {
+.newsletter container {
     width: 200px;
     padding: 10px;
     margin: auto;
-    display: inline-block; 
+    display: inline-block;
     float: right;
 }
 
 /* Style the input elements and the submit button */
-.newsletter-input[type=text], input[type=submit] {
+.newsletter input[type=text], input[type=submit] {
     width: 90px;
     padding: 5px;
     margin: 4px 0;
@@ -94,100 +86,23 @@ ul.customnavbar {
     border: 0px solid #ccc;
     box-sizing: border-box;
     font-size: 10px;
+    color: gray;
 }
 
 /* Style the submit button */
-.newsletter-input[type=submit] {
-    color: white;
+.newsletter input[type=submit] {
+    color: gray;
     border: none;
     font-size: 10px;
 }
 
-.newsletter-input[type=submit]:hover {
+.newsletter input[type=submit]:hover {
     opacity: 0.8;
-}
-
-
-/* footer social icons */
-ul.social-network {
-    list-style: none;
-    display: inline-block;
-    margin-left:0 !important;
-    padding: 0px;
-    float: right;
-}
-ul.social-network li {
-    display: inline-block;
-    margin: 0 5px;
-}
-
-/* footer social icons */
-.social-network a.icoRss:hover {
-    background-color: #F56505;
-}
-.social-network a.icoFacebook:hover {
-    background-color:#3B5998;
-}
-.social-network a.icoTwitter:hover {
-    background-color:#33ccff;
-}
-.social-network a.icoGoogle:hover {
-    background-color:#BD3518;
-}
-.social-network a.icoVimeo:hover {
-    background-color:#0590B8;
-}
-.social-network a.icoLinkedin:hover {
-    background-color:#007bb7;
-}
-.social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
-.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
-    color:#808080;
-}
-a.socialIcon:hover, .socialHoverClass {
-    color:#44BCDD;
-}
-
-.social-circle li a {
-    display:inline-block;
-    position:relative;
-    margin:0 auto 0 auto;
-    -moz-border-radius:50%;
-    -webkit-border-radius:50%;
-    border-radius:50%;
-    text-align:center;
-    width: 50px;
-    height: 50px;
-    font-size:20px;
-}
-.social-circle li i {
-    margin:0;
-    line-height:50px;
-    text-align: center;
-}
-
-.social-circle li a:hover i, .triggeredHover {
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -ms--transform: rotate(360deg);
-    transform: rotate(360deg);
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    transition: all 0.2s;
-}
-.social-circle i {
-    color: #fff;
-    -webkit-transition: all 0.8s;
-    -moz-transition: all 0.8s;
-    -o-transition: all 0.8s;
-    -ms-transition: all 0.8s;
-    transition: all 0.8s;
+    color: gray;
 }
 
 a {
-    background-color: #D3D3D3;   
+    background-color: #D3D3D3;
 }
 
 .padding50px {
@@ -223,9 +138,9 @@ a {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
 }
 
 /* Hide the images by default */
@@ -234,52 +149,52 @@ a {
 }
 
 /* Next & previous buttons */
- .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: #9e42f4;
+    background-color: #9e42f4;
 }
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
 }
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
 }
 
-#video-viewport { position: absolute; top: 0; left: 0; width: 100%; height: 80%; overflow: hidden; z-index: -1; }
+#video-viewport { position: absolute; top: 0; left: 0; width: 100%; height: 90%; overflow: hidden; z-index: -1; }
 video { display: block; width: 100%; height: auto; }
 
 .fullsize-video-bg { height: 80%; overflow: hidden; }
@@ -309,37 +224,49 @@ li a {
 /* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: #d1c6cb;
-} 
+}
+
+.main {
+    margin-bottom: 100px;
+}
 
 .footer {
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: #8830d1;
-   color: white;
-   text-align: center;
-   position: fixed;
-   height: 20px;
-   margin-top: 10px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-color: #8830d1;
+    color: white;
+    text-align: center;
+    position: fixed;
+    margin-top: 10px;
+    
+    margin-bottom: 0px;
+    color: #fff;
+    background-color: #252A8B !important;
+    background-image: none;
+    background-repeat: none;
+    font-family: "Quicksand";
+    font-size: 15px;
 }
- width 
+
+width
 ::-webkit-scrollbar {
     width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: #f1f1f1;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #555;
 }
 
 .input {
@@ -362,7 +289,7 @@ li a:hover {
     width: 50%;
 }
 
- .topleft {
+.topleft {
     position: absolute;
     top: 8px;
     left: 16px;
@@ -381,6 +308,7 @@ div.fontre {
     font-size: 18px;
 }
 
+
 .form {
     border: 3px solid #f1f1f1;
     font-family: Arial;
@@ -388,6 +316,7 @@ div.fontre {
 
 
 .input1{
+
     width: 100%;
     padding: 12px;
     margin: 8px 0;
@@ -410,4 +339,26 @@ input[type=submit]:hover {
     opacity: 0.8;
 }
 
+
+img.searchResult {
+
+    width: 150px;
+    height: 100px;
+    margin-left: 13px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.overlay-desc h1 {
+  background: rgba(0,0,0,0);
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  margin-bottom: 300px;
+  font-size: 60px;
+  font-family: "Quicksand";
+  color: #fff;
+}
 

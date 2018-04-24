@@ -1,4 +1,9 @@
 
+</br>
+<h2>Here is a list of all articles</h2>
+</br>
+
+
 <p></p>
 <div class="row">
     <div class="pull-right">
@@ -7,6 +12,7 @@
         
     </div>
 </div>
+
 
 <table style="width:70%">
     <tr>
