@@ -27,12 +27,26 @@ class ArticleController {
     }
 
     public function createArticle() {
+
+// we expect a url of form ?controller=product&action=create
+// if it's a GET request display a blank form for creating a new product
+// else it's a POST so add to the database and redirect to readAll action
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+            require_once('views/articles/createArticle.php');
+        } else {
+            Article::addArticle();
+            header("Location: index.php");
+            exit();
+
+            $articles = Article::all(); //$products is used within the view
+            require_once('views/articles/readAll.php');
+
         try {
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 require_once('views/articles/createArticle.php');
             } else {
                 Article::addArticle();
-                header("Location: " . $_SERVER['REQUEST_URI']);
+                header("Location: index.php");
                 exit();
 
                 $articles = Article::all();
@@ -40,6 +54,7 @@ class ArticleController {
             }
         } catch (Exception $ex) {
             return call('pages', 'error');
+
         }
     }
 

@@ -60,8 +60,8 @@ class Article {
         
         //add a map to db and article
         if (isset ($_POST['latitude']) && $_POST['latitude'] != "" && isset ($_POST['longitude']) && $_POST['longitude'] != ""){
-            $req2 = $db->prepare('UPDATE article SET map_id=:map_id WHERE article_id = :article_id');
             $map_id = Article::addMap();
+            $req2 = $db->prepare('UPDATE article SET map_id=:map_id WHERE article_id = :article_id');
             $req2->bindParam(':map_id', $map_id);
             $req2->bindParam(':article_id', $article_id);
             $req2->execute();            
@@ -98,14 +98,32 @@ class Article {
     
     public static function addMap() {
         $db = Db::getInstance();
-        $req = $db->prepare("INSERT INTO map(latitude, longitude) SELECT :latitude, :longitude FROM map WHERE NOT EXISTS (SELECT * FROM map WHERE latitude= :latitude AND longitude= :longitude ) LIMIT 1");
-        $req->bindParam(':latitude', $lat);
-        $req->bindParam(':longitude', $long);
         $lat = filter_input(INPUT_POST, 'latitude', FILTER_VALIDATE_FLOAT);
         $long = filter_input(INPUT_POST, 'longitude', FILTER_VALIDATE_FLOAT);
+        $req = $db->query("select * from map where latitude =$lat AND longitude= $long");
+        $map = $req->fetch();
+        if ($map){
+            echo 'exists';
+            return $map['map_id'];
+        }else{
+            echo 'not exists';
+            $req1 = $db->prepare("INSERT INTO map(latitude, longitude) VALUES (:latitude, :longitude)");
+            $req1->bindParam(':latitude', $lat);
+            $req1->bindParam(':longitude', $long);
+            $req1->execute();
+            echo $db->lastInsertId();
+            echo $lat;
+            return $db->lastInsertId();
+        }
         
-        $req->execute();
-        return $db->lastInsertId();
+        
+//        $req = $db->prepare("INSERT INTO map(latitude, longitude) SELECT :latitude, :longitude FROM map WHERE NOT EXISTS (SELECT * FROM map WHERE latitude= :latitude AND longitude= :longitude ) LIMIT 1");
+//        $req->bindParam(':latitude', $lat);
+//        $req->bindParam(':longitude', $long);
+//        $lat = filter_input(INPUT_POST, 'latitude', FILTER_VALIDATE_FLOAT);
+//        $long = filter_input(INPUT_POST, 'longitude', FILTER_VALIDATE_FLOAT);
+//        $req->execute();
+        //return $db->lastInsertId();
         
     }
    
