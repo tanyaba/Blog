@@ -33,11 +33,12 @@
             <!--<ul class="customnavbar">-->
             <li class='logo'><a href="index.php">What's up London</a></li>
             <div class="pull-right">
-            <li><a href="?controller=article&action=readcategory">What's On</a></li>
+            <li><a href="?controller=comment&action=categoryone">What's On</a></li>
             <li><a href="?controller=comment&action=categorytwo">Food & Drink</a></li>
-            <li><a href="#about">Social</a></li>
-            <li><a href="#about">Sight Seeing</a></li>
-            <li><a href="#about">Hotels</a></li>
+            <li><a href="?controller=comment&action=categorythree">Social</a></li>
+            <li><a href="?controller=comment&action=categoryfive">Sight Seeing</a></li>
+            <li><a href="?controller=comment&action=categorysix">Hotels</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a><li>
             </div>
         </ul>
         <?php
@@ -115,6 +116,9 @@
        
 
     </div>
+        
 </body>
+
+
 </html>                            
 
