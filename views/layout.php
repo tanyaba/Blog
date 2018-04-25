@@ -38,7 +38,6 @@
             <li><a href="?controller=comment&action=categorythree">Social</a></li>
             <li><a href="?controller=comment&action=categoryfive">Sight Seeing</a></li>
             <li><a href="?controller=comment&action=categorysix">Hotels</a></li>
-            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a><li>
             </div>
         </ul>
         <?php
