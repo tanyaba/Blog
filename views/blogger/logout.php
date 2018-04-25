@@ -6,7 +6,7 @@
         <div class='col-md-4'>
             <center><h2> You're now logged out </h2>
                 <br/>
-                <a href='/MVC-Skeleton/index.php' class="btn btn-info" role="button">Home</a>
+                <a href='index.php' class="btn btn-info" role="button">Home</a>
         </div>
     </div>
 </div>
