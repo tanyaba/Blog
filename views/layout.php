@@ -46,6 +46,14 @@
         if (!isset($_SESSION['blogger_id'])) {
             echo '<ul style="background-color: transparent ">
                 <div class="pull-right">
+                <center>
+                <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+            </center>
+            </div>
+                <div class="pull-right">
                 <form class="searchbox" action="index.php" method="GET" role="form" id="searchform">';
                 if ($controller == 'pages' && $action == 'Homepage'){
                     echo'<input type="text" name="search" id="search" class="form-control" placeholder="Search">';
@@ -86,7 +94,13 @@
         <?php require_once('routes.php'); ?>
     </div>
         <div class="footer">
-        <ul>
+            <ul>
+            <div class="pull-right">
+            <li><a href="?controller=pages&action=contact">Contact Us</a></li>
+            <li><a href='?controller=pages&action=unsubscribe'>Unsubscribe</a></li>
+            <li><a href='?controller=blogger&action=login'>Blogger login</a></li>
+            </div>
+                <li><p style="margin-left: 10px; margin-right: 30px; margin-top: 13px; margin-bottom: 13px; color: #fff">@WhatsUpLondon2018</p></li>           
             <li><p style=" margin-left: 10px; margin-right: 30px; margin-top: 13px; margin-bottom: 13px; color: #fff">Sign up to our news!</p></li>
                 <li><form style="margin-left: 10px; margin-right: 30px; margin-top: 5px; margin-bottom: 10px;" class="newsletter" method="POST" action='?controller=subscriber&action=addSubscriber'> 
                         <input class="newsletter" type="text" placeholder="Name" name="subscriber_name" required>
@@ -94,25 +108,9 @@
                         <input class="newsletter" onlick= "JSalert()" type="submit" name="subscribe">
                     </form>  
                 </li>
-                <div class="pull-right">
-                <center>
-                <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-            </center>
-            </div>
-            
+                
+       
             </ul>
-            <ul>
-            <div class="pull-right">
-            <li><a href="#AboutUs">About Us</a></li>
-            <li><a href="?controller=pages&action=contact">Contact Us</a></li>
-            <li><a href='?controller=pages&action=unsubscribe'>Unsubscribe</a></li>
-            <li><a href='?controller=blogger&action=login'>Blogger login</a></li>
-            </div>
-                <li><p style="margin-left: 10px; margin-right: 30px; margin-top: 13px; margin-bottom: 13px; color: #fff">@WhatsUpLondon2018</p></li>           
-        </ul>
        
 
     </div>

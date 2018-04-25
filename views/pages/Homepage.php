@@ -17,14 +17,14 @@ $numOfCols = 3;
 $rowCount = 0;
 $bootstrapColWidth = 12 / $numOfCols;
 ?>
-<div class="row" style="margin-top: 620px">
+<div class="row" style="margin-top: 460px">
     <?php
     foreach ($articles as $article) {
         $file = 'views/images/' . $article->id . '.jpg';
         ?>
         <div class="col-md-<?php echo $bootstrapColWidth; ?>">
             <div class="w3-card-4" style="margin-top: 10px;padding-left: 10px" >
-                <img src="<?php echo $file ?>" alt="" style="width:100%;height: 230px">
+                <img src="<?php echo $file ?>" alt="" style="width:100%">
                 <div class="w3-container w3-center">
                     <div class="fonttitle" ><a  href="?controller=article&action=readArticle&article_id=<?php echo $article->id; ?>"><p><?php echo $article->title; ?></p></a></div>
                     <div class="font" style="font-style: italic; margin-left:-40px ">Posted on <?php echo $article->date; ?>
