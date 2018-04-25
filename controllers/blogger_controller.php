@@ -5,7 +5,6 @@ include_once __DIR__ . '/../models/blogger.php';
 class bloggerController {
 
     public function register() {
-
         try {
             if (isset($_POST['register'])) {
                 $blogger = blogger::registerBlogger($_POST['f_name'], $_POST['l_name'], $_POST['email'], $_POST['username'], $_POST['password']);
