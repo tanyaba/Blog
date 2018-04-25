@@ -73,9 +73,9 @@
                 echo"<ul class='customnavbarPage'>";
             }
             echo '<div class="pull-right">';
-            echo "<li><small><a href='?controller=article&action=readAll'>Amend articles</a></small></li> ";
+            echo "<li><small><a href='?controller=article&action=readAll'>Amend Articles</a></small></li> ";
             echo "<li><small><a href='?controller=article&action=createArticle'>Create New Article</a></small></li>";
-            echo "<li><small><a href='?controller=blogger&action=register'>Add collaborator</a></small></li>";
+            echo "<li><small><a href='?controller=blogger&action=register'>Add Collaborator</a></small></li>";
             echo "<li><small><a href='?controller=blogger&action=logout'>Logout</a></small></li>";
             //search button
             echo '<div  class="pull-right">
