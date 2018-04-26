@@ -85,27 +85,20 @@ class ArticleController {
     }
 
     public function update() {
-
-        try {
-            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-                if (!isset($_GET['article_id']))
-                    return call('pages', 'error');
-                require_once('models/comment.php');
-
-                $article = Article::find($_GET['article_id']);
-//$comment = Comment::allArticleComments($_GET['article_id']); - this method if form all status of comments Approved, rej and Pending
-                $comment = Comment::pendingArticleComments($_GET['article_id']);
-
-                require_once('views/articles/update.php');
-            } else {
-                $id = $_GET['article_id'];
-                Article::update($id);
-
-                $articles = Article::all();
-                require_once('views/articles/readAll.php');
-            }
-        } catch (Exception $ex) {
-            return call('pages', 'error');
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+            if (!isset($_GET['article_id'])){
+            return call('pages', 'error');}
+            // we use the given id to get the correct product
+            require_once('models/comment.php');
+            $article = Article::find($_GET['article_id']);
+            $comment = Comment::allArticleComments($_GET['article_id']);
+            require_once('views/articles/update.php');
+        }
+        else {
+            $id = $_GET['article_id'];
+            Article::update($id);
+            $articles = Article::all();
+            require_once('views/articles/readAll.php');
         }
     }
 
@@ -119,6 +112,17 @@ class ArticleController {
             return call('pages', 'error');
         }
     }
+    
+    public function deleteComment() {
+            Article::removeComment($_GET['comment_id']);
+            
+            // we use the given id to get the correct product
+            require_once('models/comment.php');
+            $article = Article::find($_GET['article_id']);
+            //$comment = Comment::allArticleComments($_GET['article_id']); - this method if form all status of comments Approved, rej and Pending
+            $comment = Comment::allArticleComments($_GET['article_id']);
+            require_once('views/articles/update.php');
+      }
 
     public function readcategory() {
         try {
