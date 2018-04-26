@@ -8,7 +8,7 @@ class subscriberController {
 
     public function addSubscriber() {
         try {
-            if (isset($_POST['subscribe'])) {
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $subscriber = subscriber::addSubscriber($_POST['subscriber_name'], $_POST['subscriber_email']);
             }
         } catch (Exception $ex) {
