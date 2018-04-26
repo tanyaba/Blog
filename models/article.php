@@ -77,10 +77,12 @@ class Article {
     public static function all() {
       $list = [];
       $db = Db::getInstance();
-      $req = $db->query('select article.article_id as article_id,title,content,article.date as date,count(comment.article_id) as numberofcomments from article join comment on article.article_id=comment.article_id group by article.article_id order by article.date DESC limit 6'); //SELECT * FROM `article` 
-      // we create a list of Product objects from the database results
+      //$req = $db->query('Select * from article ORDER by date DESC limit 6'); //SELECT * FROM `article` 
+      $req = $db->query('Select * from article ORDER by date DESC'); 
+      
+    /// we create a list of Product objects from the database results
       foreach($req->fetchAll() as $article) {
-        $list[] = new Article($article['article_id'], $article['title'],$article['content'], $article['date'],$article['numberofcomments']);
+        $list[] = new Article($article['article_id'], $article['title'], $article['content'], $article['date']);
       }
       return $list;
     }
@@ -146,13 +148,11 @@ class Article {
 
     public static function update($id) {
         $db = Db::getInstance();
-        $req = $db->prepare("Update article set title=:title, content=:content where article_id=:article_id");
+        $req = $db->prepare("Update article set title=:title, content=:content where article_id=:article_id"); // should this be article ID or $id
         $req->bindParam(':article_id', $id);
         $req->bindParam(':title', $title);
         $req->bindParam(':content', $content);
-
       //$req->bindParam(':date', $date);
-
 // set name and price parameters and execute
         if (isset($_POST['title']) && $_POST['title'] != "") {
             $filteredTitle = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -160,18 +160,21 @@ class Article {
         if (isset($_POST['content']) && $_POST['content'] != "") {
             $filteredContent = filter_input(INPUT_POST, 'content', FILTER_SANITIZE_SPECIAL_CHARS);
         }
-        /* if(isset($_POST['date'])&& $_POST['date']!=""){
-          $filteredDate = filter_input(INPUT_POST,'date', FILTER_SANITIZE_SPECIAL_CHARS);
-          } */
+        
         $title = $filteredTitle;
         $content = $filteredContent;
-//$date = $filteredDate;
         $req->execute();
-
-//upload product image if it exists
-        if (!empty($_FILES[self::InputKey]['title'])) {
-            Article::uploadFile($title);
+        //upload artice image if it exists
+        /**if (isset($_FILES[self::InputKey]['title'])){ //if (!empty($_FILES[self::InputKey]['name']))
+            Article::uploadFile($id); // Victoria's code says Product::uploadFile($name);
+        }**/
+        
+        //upload artice image if it exists
+        if (isset($_FILES['myUploader']) && $_FILES['myUploader']['error'] == 0){
+            echo 'in update image';
+            Article::uploadFile($id);
         }
+        
     }
 
     public static function add() {
@@ -248,6 +251,15 @@ class Article {
         $req = $db->prepare('delete FROM article WHERE article_id = :article_id');
         // the query was prepared, now replace :id with the actual $id value
         $req->execute(array('article_id' => $id));
+    }
+    
+    public static function removeComment($id) {
+        $db = Db::getInstance();
+        //make sure $id is an integer
+        $id = intval($id);
+        $req = $db->prepare('delete FROM comment WHERE comment_id = :comment_id');
+        // the query was prepared, now replace :id with the actual $id value
+        $req->execute(array('comment_id' => $id));
     }
 
     

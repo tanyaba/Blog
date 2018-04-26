@@ -22,6 +22,8 @@ class bloggerController {
                 $blogger = blogger::getBloggerIfValid($_POST['username'], $_POST['password']);
                 if ($blogger !== NULL) {
                     $_SESSION['blogger_id'] = $blogger->getBloggerId();
+                    $_SESSION['blogger_f_name'] = $blogger->getFname();
+                    $_SESSION['blogger_l_name'] = $blogger->getLname();
                     echo '<script> location.replace("?controller=article&action=readAll"); </script>';
                 } else {
                     $showLoginWarning = TRUE;
